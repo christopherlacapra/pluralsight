@@ -19,7 +19,7 @@
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
     <NodejsPort>1337</NodejsPort>
     <StartWebBrowser>true</StartWebBrowser>
   </PropertyGroup>
@@ -31,9 +31,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="config\express.js" />
     <Compile Include="gulpfile.js" />
     <Compile Include="Procfile" />
     <Compile Include="public\app.js" />
+    <Compile Include="public\home\authentication\authentication.js" />
     <Compile Include="public\home\home.js" />
     <Compile Include="public\vendor\angular-resource\angular-resource.js" />
     <Compile Include="public\vendor\angular-resource\angular-resource.min.js" />
@@ -173,6 +175,8 @@
     <Compile Include="bin\www" />
     <Content Include=".bowerrc" />
     <Content Include="package.json" />
+    <Content Include="public\home\authentication\login.html" />
+    <Content Include="public\home\authentication\registration.html" />
     <Content Include="public\home\home.html" />
     <Content Include="public\index.html" />
     <Content Include="public\stylesheets\style.styl" />
@@ -331,8 +335,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
+    <Folder Include="config\" />
     <Folder Include="public\" />
     <Folder Include="public\home\courses\" />
+    <Folder Include="public\home\authentication\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
     <Folder Include="public\home\" />
