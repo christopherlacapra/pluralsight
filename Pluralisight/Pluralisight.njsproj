@@ -5,6 +5,8 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <Name>Pluralisight</Name>
     <RootNamespace>Pluralisight</RootNamespace>
+    <LaunchUrl>
+    </LaunchUrl>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -12,7 +14,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e4e72e19-73e0-431d-84bb-4c853ff4e925</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>server.js</StartupFile>
+    <StartupFile>bin\www</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -20,7 +22,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
     <ProjectView>ProjectFiles</ProjectView>
-    <NodejsPort>1337</NodejsPort>
+    <NodejsPort>3030</NodejsPort>
     <StartWebBrowser>True</StartWebBrowser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -30,6 +32,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="public\app\app.js" />
     <Compile Include="public\vendor\bootstrap\dist\js\bootstrap.js" />
     <Compile Include="public\vendor\bootstrap\dist\js\bootstrap.min.js" />
     <Compile Include="public\vendor\bootstrap\dist\js\npm.js" />
@@ -77,11 +80,8 @@
     <Compile Include="public\vendor\angular\angular.js" />
     <Compile Include="public\vendor\angular\angular.min.js" />
     <Compile Include="public\vendor\angular\index.js" />
-    <Compile Include="public\vendor\jquery\dist\core.js" />
     <Compile Include="public\vendor\jquery\dist\jquery.js" />
     <Compile Include="public\vendor\jquery\dist\jquery.min.js" />
-    <Compile Include="public\vendor\jquery\dist\jquery.slim.js" />
-    <Compile Include="public\vendor\jquery\dist\jquery.slim.min.js" />
     <Compile Include="public\vendor\jquery\external\sizzle\dist\sizzle.js" />
     <Compile Include="public\vendor\jquery\external\sizzle\dist\sizzle.min.js" />
     <Compile Include="public\vendor\jquery\src\ajax.js" />
@@ -338,7 +338,6 @@
     <Content Include="public\vendor\jquery\AUTHORS.txt" />
     <Content Include="public\vendor\jquery\bower.json" />
     <Content Include="public\vendor\jquery\dist\jquery.min.map" />
-    <Content Include="public\vendor\jquery\dist\jquery.slim.min.map" />
     <Content Include="public\vendor\jquery\external\sizzle\dist\sizzle.min.map" />
     <Content Include="public\vendor\jquery\external\sizzle\LICENSE.txt" />
     <Content Include="public\vendor\jquery\LICENSE.txt" />
@@ -355,13 +354,11 @@
     <Content Include="public\vendor\toastr\toastr.scss" />
     <Content Include="README.md" />
     <Content Include="public\favicon.ico" />
-    <Content Include="server\includes\layout.jade" />
     <Content Include="server\includes\scripts.jade" />
-    <Content Include="server\views\index.jade" />
+    <Content Include="public\index.html" />
     <Content Include="typings.json" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
-    <Content Include="views\error.jade" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
@@ -412,16 +409,15 @@
     <Folder Include="server\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
-    <Folder Include="public\javascripts\" />
+    <Folder Include="public\app\" />
     <Folder Include="public\css\" />
     <Folder Include="routes\" />
-    <Folder Include="server\includes\" />
-    <Folder Include="server\views\" />
     <Folder Include="typings\" />
     <Folder Include="typings\globals\" />
     <Folder Include="typings\globals\body-parser\" />
     <Folder Include="typings\globals\cookie-parser\" />
     <Folder Include="typings\globals\debug\" />
+    <Folder Include="typings\globals\ejs\" />
     <Folder Include="typings\globals\express-serve-static-core\" />
     <Folder Include="typings\globals\express\" />
     <Folder Include="typings\globals\jade\" />
@@ -437,12 +433,12 @@
     <Folder Include="typings\globals\serve-favicon\" />
     <Folder Include="typings\globals\serve-static\" />
     <Folder Include="typings\globals\stylus\" />
-    <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="typings\globals\body-parser\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\cookie-parser\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\debug\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\ejs\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\express-serve-static-core\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\express\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\jade\index.d.ts" />

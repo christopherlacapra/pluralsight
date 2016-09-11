@@ -14,6 +14,7 @@
   "license": "BSD-2-Clause",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "ejs": "^2.5.2",
     "express": "~3.4.4",
     "jade": "~0.35.0",
     "mongoose": "~3.8.0",
