@@ -30,7 +30,10 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app.js" />
+    <Compile Include="config\mongo.js" />
+    <Compile Include="config\routes.js" />
+    <Compile Include="server.js" />
+    <Compile Include="config\config.js" />
     <Compile Include="config\express.js" />
     <Compile Include="gulpfile.js" />
     <Compile Include="Procfile" />
@@ -175,6 +178,7 @@
     <Compile Include="bin\www" />
     <Content Include=".bowerrc" />
     <Content Include="package.json" />
+    <Content Include="public\favicon.ico" />
     <Content Include="public\home\authentication\login.html" />
     <Content Include="public\home\authentication\registration.html" />
     <Content Include="public\home\home.html" />
@@ -329,7 +333,6 @@
     <Content Include="public\vendor\toastr\toastr.scss" />
     <Content Include="README.md" />
     <Content Include="typings.json" />
-    <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
     <Content Include="web.config" />
   </ItemGroup>
@@ -399,7 +402,6 @@
     <Folder Include="typings\globals\serve-favicon\" />
     <Folder Include="typings\globals\serve-static\" />
     <Folder Include="typings\globals\stylus\" />
-    <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="typings\globals\body-parser\index.d.ts" />
