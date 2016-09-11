@@ -8,6 +8,9 @@ var mongo = require("mongoose");
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+var env = process.env.NODE_ENV = process.env.NODE_ENV || "development";
+
+
 var app = express();
 
 // uncomment after placing your favicon in /public
@@ -19,19 +22,23 @@ app.use(cookieParser());
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes); 
+app.use('/', routes);
 app.use('/users', users);
 
 //DB config
-mongo.connect("mongodb://localhost/multivision");
+if (env === "development") {
+    mongo.connect("mongodb://localhost/multivision");
+} else {
+    mongo.connect("mongodb://root:sallustius@ds021166.mlab.com:21166/node");
+}
+
 var db = mongo.connection;
 
-db.on("error",console.error.bind(console, "Connection error"));
+db.on("error", console.error.bind(console, "Connection error"));
 db.once("open",
     function () {
-        console.log("db opened");
+        console.log("db opened in " + env);
     });
-
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -65,4 +72,10 @@ app.use(function (err, req, res, next) {
 });
 
 
-module.exports = app;
+//module.exports = app;
+
+var port = process.env.PORT || 3030;
+app.listen(port,
+    function() {
+        console.log("Magic is happening on " + port);
+    });
