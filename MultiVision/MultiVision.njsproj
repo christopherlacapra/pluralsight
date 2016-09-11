@@ -33,7 +33,8 @@
     <Compile Include="app.js" />
     <Compile Include="gulpfile.js" />
     <Compile Include="Procfile" />
-    <Compile Include="public\javascripts\app.js" />
+    <Compile Include="public\app.js" />
+    <Compile Include="public\home\home.js" />
     <Compile Include="public\vendor\angular-resource\angular-resource.js" />
     <Compile Include="public\vendor\angular-resource\angular-resource.min.js" />
     <Compile Include="public\vendor\angular-resource\index.js" />
@@ -172,6 +173,7 @@
     <Compile Include="bin\www" />
     <Content Include=".bowerrc" />
     <Content Include="package.json" />
+    <Content Include="public\home\home.html" />
     <Content Include="public\index.html" />
     <Content Include="public\stylesheets\style.styl" />
     <Content Include="public\vendor\angular-resource\.bower.json" />
@@ -330,8 +332,10 @@
   <ItemGroup>
     <Folder Include="bin\" />
     <Folder Include="public\" />
+    <Folder Include="public\home\courses\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
+    <Folder Include="public\home\" />
     <Folder Include="public\vendor\" />
     <Folder Include="public\stylesheets\" />
     <Folder Include="public\vendor\angular-resource\" />
