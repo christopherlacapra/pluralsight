@@ -12,7 +12,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e4e72e19-73e0-431d-84bb-4c853ff4e925</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>bin\www</StartupFile>
+    <StartupFile>server.js</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,7 @@
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
     <ProjectView>ProjectFiles</ProjectView>
     <NodejsPort>1337</NodejsPort>
-    <StartWebBrowser>true</StartWebBrowser>
+    <StartWebBrowser>True</StartWebBrowser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,7 +30,31 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app.js" />
+    <Compile Include="public\vendor\bootstrap\dist\js\bootstrap.js" />
+    <Compile Include="public\vendor\bootstrap\dist\js\bootstrap.min.js" />
+    <Compile Include="public\vendor\bootstrap\dist\js\npm.js" />
+    <Compile Include="public\vendor\bootstrap\Gruntfile.js" />
+    <Compile Include="public\vendor\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Compile Include="public\vendor\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Compile Include="public\vendor\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Compile Include="public\vendor\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Compile Include="public\vendor\bootstrap\grunt\change-version.js" />
+    <Compile Include="public\vendor\bootstrap\js\affix.js" />
+    <Compile Include="public\vendor\bootstrap\js\alert.js" />
+    <Compile Include="public\vendor\bootstrap\js\button.js" />
+    <Compile Include="public\vendor\bootstrap\js\carousel.js" />
+    <Compile Include="public\vendor\bootstrap\js\collapse.js" />
+    <Compile Include="public\vendor\bootstrap\js\dropdown.js" />
+    <Compile Include="public\vendor\bootstrap\js\modal.js" />
+    <Compile Include="public\vendor\bootstrap\js\popover.js" />
+    <Compile Include="public\vendor\bootstrap\js\scrollspy.js" />
+    <Compile Include="public\vendor\bootstrap\js\tab.js" />
+    <Compile Include="public\vendor\bootstrap\js\tooltip.js" />
+    <Compile Include="public\vendor\bootstrap\js\transition.js" />
+    <Compile Include="public\vendor\bootstrap\package.js" />
+    <Compile Include="public\vendor\toastr\toastr.js" />
+    <Compile Include="public\vendor\toastr\toastr.min.js" />
+    <Compile Include="server.js" />
     <Compile Include="public\vendor\angular-animate\angular-animate.js" />
     <Compile Include="public\vendor\angular-animate\angular-animate.min.js" />
     <Compile Include="public\vendor\angular-animate\index.js" />
@@ -164,8 +188,9 @@
     <Compile Include="routes\users.js" />
     <Compile Include="bin\www" />
     <Content Include=".bowerrc" />
+    <Content Include="bower.json" />
     <Content Include="package.json" />
-    <Content Include="public\stylesheets\style.styl" />
+    <Content Include="public\css\style.styl" />
     <Content Include="public\vendor\angular-animate\.bower.json" />
     <Content Include="public\vendor\angular-animate\angular-animate.min.js.map" />
     <Content Include="public\vendor\angular-animate\bower.json" />
@@ -200,6 +225,115 @@
     <Content Include="public\vendor\angular\LICENSE.md" />
     <Content Include="public\vendor\angular\package.json" />
     <Content Include="public\vendor\angular\README.md" />
+    <Content Include="public\vendor\bootstrap\.bower.json" />
+    <Content Include="public\vendor\bootstrap\bower.json" />
+    <Content Include="public\vendor\bootstrap\CHANGELOG.md" />
+    <Content Include="public\vendor\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="public\vendor\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="public\vendor\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="public\vendor\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="public\css\bootstrap.css" />
+    <Content Include="public\vendor\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="public\vendor\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="public\vendor\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="public\vendor\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\vendor\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\vendor\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\vendor\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\vendor\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\vendor\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\vendor\bootstrap\Gemfile" />
+    <Content Include="public\vendor\bootstrap\Gemfile.lock" />
+    <Content Include="public\vendor\bootstrap\grunt\.jshintrc" />
+    <Content Include="public\vendor\bootstrap\grunt\configBridge.json" />
+    <Content Include="public\vendor\bootstrap\grunt\npm-shrinkwrap.json" />
+    <Content Include="public\vendor\bootstrap\grunt\sauce_browsers.yml" />
+    <Content Include="public\vendor\bootstrap\ISSUE_TEMPLATE.md" />
+    <Content Include="public\vendor\bootstrap\js\.jscsrc" />
+    <Content Include="public\vendor\bootstrap\js\.jshintrc" />
+    <Content Include="public\vendor\bootstrap\less\.csscomb.json" />
+    <Content Include="public\vendor\bootstrap\less\.csslintrc" />
+    <Content Include="public\vendor\bootstrap\less\alerts.less" />
+    <Content Include="public\vendor\bootstrap\less\badges.less" />
+    <Content Include="public\vendor\bootstrap\less\bootstrap.less" />
+    <Content Include="public\vendor\bootstrap\less\breadcrumbs.less" />
+    <Content Include="public\vendor\bootstrap\less\button-groups.less" />
+    <Content Include="public\vendor\bootstrap\less\buttons.less" />
+    <Content Include="public\vendor\bootstrap\less\carousel.less" />
+    <Content Include="public\vendor\bootstrap\less\close.less" />
+    <Content Include="public\vendor\bootstrap\less\code.less" />
+    <Content Include="public\vendor\bootstrap\less\component-animations.less" />
+    <Content Include="public\vendor\bootstrap\less\dropdowns.less" />
+    <Content Include="public\vendor\bootstrap\less\forms.less" />
+    <Content Include="public\vendor\bootstrap\less\glyphicons.less" />
+    <Content Include="public\vendor\bootstrap\less\grid.less" />
+    <Content Include="public\vendor\bootstrap\less\input-groups.less" />
+    <Content Include="public\vendor\bootstrap\less\jumbotron.less" />
+    <Content Include="public\vendor\bootstrap\less\labels.less" />
+    <Content Include="public\vendor\bootstrap\less\list-group.less" />
+    <Content Include="public\vendor\bootstrap\less\media.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\alerts.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\buttons.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\center-block.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\forms.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\gradients.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\grid.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\image.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\labels.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\list-group.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\opacity.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\pagination.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\panels.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\reset-text.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\resize.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\size.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\table-row.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="public\vendor\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="public\vendor\bootstrap\less\modals.less" />
+    <Content Include="public\vendor\bootstrap\less\navbar.less" />
+    <Content Include="public\vendor\bootstrap\less\navs.less" />
+    <Content Include="public\vendor\bootstrap\less\normalize.less" />
+    <Content Include="public\vendor\bootstrap\less\pager.less" />
+    <Content Include="public\vendor\bootstrap\less\pagination.less" />
+    <Content Include="public\vendor\bootstrap\less\panels.less" />
+    <Content Include="public\vendor\bootstrap\less\popovers.less" />
+    <Content Include="public\vendor\bootstrap\less\print.less" />
+    <Content Include="public\vendor\bootstrap\less\progress-bars.less" />
+    <Content Include="public\vendor\bootstrap\less\responsive-embed.less" />
+    <Content Include="public\vendor\bootstrap\less\responsive-utilities.less" />
+    <Content Include="public\vendor\bootstrap\less\scaffolding.less" />
+    <Content Include="public\vendor\bootstrap\less\tables.less" />
+    <Content Include="public\vendor\bootstrap\less\theme.less" />
+    <Content Include="public\vendor\bootstrap\less\thumbnails.less" />
+    <Content Include="public\vendor\bootstrap\less\tooltip.less" />
+    <Content Include="public\vendor\bootstrap\less\type.less" />
+    <Content Include="public\vendor\bootstrap\less\utilities.less" />
+    <Content Include="public\vendor\bootstrap\less\variables.less" />
+    <Content Include="public\vendor\bootstrap\less\wells.less" />
+    <Content Include="public\vendor\bootstrap\LICENSE" />
+    <Content Include="public\vendor\bootstrap\nuget\bootstrap.less.nuspec" />
+    <Content Include="public\vendor\bootstrap\nuget\bootstrap.nuspec" />
+    <Content Include="public\vendor\bootstrap\nuget\MyGet.ps1" />
+    <Content Include="public\vendor\bootstrap\package.json" />
+    <Content Include="public\vendor\bootstrap\README.md" />
     <Content Include="public\vendor\jquery\.bower.json" />
     <Content Include="public\vendor\jquery\AUTHORS.txt" />
     <Content Include="public\vendor\jquery\bower.json" />
@@ -210,7 +344,20 @@
     <Content Include="public\vendor\jquery\LICENSE.txt" />
     <Content Include="public\vendor\jquery\README.md" />
     <Content Include="public\vendor\jquery\src\.eslintrc" />
+    <Content Include="public\vendor\toastr\.bower.json" />
+    <Content Include="public\vendor\toastr\bower.json" />
+    <Content Include="public\vendor\toastr\LICENSE" />
+    <Content Include="public\vendor\toastr\README.md" />
+    <Content Include="public\vendor\toastr\toastr.css" />
+    <Content Include="public\vendor\toastr\toastr.js.map" />
+    <Content Include="public\vendor\toastr\toastr.less" />
+    <Content Include="public\vendor\toastr\toastr.min.css" />
+    <Content Include="public\vendor\toastr\toastr.scss" />
     <Content Include="README.md" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="server\includes\layout.jade" />
+    <Content Include="server\includes\scripts.jade" />
+    <Content Include="server\views\index.jade" />
     <Content Include="typings.json" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
@@ -225,6 +372,17 @@
     <Folder Include="public\vendor\AngularJS-Toaster\" />
     <Folder Include="public\vendor\AngularJS-Toaster\test\" />
     <Folder Include="public\vendor\angular\" />
+    <Folder Include="public\vendor\bootstrap\" />
+    <Folder Include="public\vendor\bootstrap\dist\" />
+    <Folder Include="public\vendor\bootstrap\dist\css\" />
+    <Folder Include="public\vendor\bootstrap\dist\fonts\" />
+    <Folder Include="public\vendor\bootstrap\dist\js\" />
+    <Folder Include="public\vendor\bootstrap\fonts\" />
+    <Folder Include="public\vendor\bootstrap\grunt\" />
+    <Folder Include="public\vendor\bootstrap\js\" />
+    <Folder Include="public\vendor\bootstrap\less\" />
+    <Folder Include="public\vendor\bootstrap\less\mixins\" />
+    <Folder Include="public\vendor\bootstrap\nuget\" />
     <Folder Include="public\vendor\jquery\" />
     <Folder Include="public\vendor\jquery\dist\" />
     <Folder Include="public\vendor\jquery\external\" />
@@ -250,12 +408,15 @@
     <Folder Include="public\vendor\jquery\src\traversing\" />
     <Folder Include="public\vendor\jquery\src\traversing\var\" />
     <Folder Include="public\vendor\jquery\src\var\" />
+    <Folder Include="public\vendor\toastr\" />
     <Folder Include="server\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
-    <Folder Include="public\stylesheets\" />
+    <Folder Include="public\css\" />
     <Folder Include="routes\" />
+    <Folder Include="server\includes\" />
+    <Folder Include="server\views\" />
     <Folder Include="typings\" />
     <Folder Include="typings\globals\" />
     <Folder Include="typings\globals\body-parser\" />
@@ -264,9 +425,15 @@
     <Folder Include="typings\globals\express-serve-static-core\" />
     <Folder Include="typings\globals\express\" />
     <Folder Include="typings\globals\jade\" />
+    <Folder Include="typings\globals\karma-jasmine\" />
+    <Folder Include="typings\globals\karma\" />
     <Folder Include="typings\globals\mime\" />
+    <Folder Include="typings\globals\mocha\" />
+    <Folder Include="typings\globals\mongoose\" />
     <Folder Include="typings\globals\morgan\" />
     <Folder Include="typings\globals\node\" />
+    <Folder Include="typings\globals\passport-local\" />
+    <Folder Include="typings\globals\passport\" />
     <Folder Include="typings\globals\serve-favicon\" />
     <Folder Include="typings\globals\serve-static\" />
     <Folder Include="typings\globals\stylus\" />
@@ -279,9 +446,15 @@
     <TypeScriptCompile Include="typings\globals\express-serve-static-core\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\express\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\jade\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\karma-jasmine\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\karma\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\mime\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\mocha\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\mongoose\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\morgan\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\passport-local\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\passport\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\serve-favicon\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\serve-static\index.d.ts" />
     <TypeScriptCompile Include="typings\globals\stylus\index.d.ts" />
