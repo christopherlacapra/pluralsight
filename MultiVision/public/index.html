@@ -2,10 +2,22 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
+    <!--IMPORTS-->
+    <link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
+    <script src="vendor/angular-resource/angular-resource.js"></script>
+    <script src="vendor/toastr/toastr.js"></script>
+
+    <!--APPLICATION-->
+    <script src="javascripts/app.js"></script>
+
     <title>Multivision</title>
 </head>
-<body>
-    Hello Folks
+<body ng-app="app">
+    <div ng-controller="AppController">
+        {{variable}}
+    </div>
 </body>
 </html>

@@ -72,10 +72,10 @@ app.use(function (err, req, res, next) {
 });
 
 
-//module.exports = app;
+module.exports = app;
 
-var port = process.env.PORT || 3030;
-app.listen(port,
-    function() {
-        console.log("Magic is happening on " + port);
-    });
+//var port = process.env.PORT || 3030;
+//app.listen(port,
+//    function() {
+//        console.log("Magic is happening on " + port);
+//    });
